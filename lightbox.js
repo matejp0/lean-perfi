@@ -30,7 +30,7 @@ template.innerHTML = `
     max-width: 100%;
     border-radius: 1rem;
     transform: scale(0);
-    transition: .5s ease-out all;
+    transition: all .5s ease-out;
     z-index: 100;
   }
   #lightbox figcaption {
@@ -81,14 +81,14 @@ class Lightbox extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
     const container = this.getAttribute('container') ? document.getElementById(this.getAttribute('container')) : document.getElementById("gallery");
 
-    const lightbox = this.shadowRoot.getElementById('lightbox');
-    const lightboxImg = this.shadowRoot.querySelector('#lightbox img');
-    const lightboxCap = this.shadowRoot.querySelector('#lightbox figcaption');
-    container.querySelectorAll(':scope img').forEach(image => {
+    const lightbox = this.shadowRoot.querySelector('#lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const lightboxCap = lightbox.querySelector('figcaption');
+    container.querySelectorAll('img').forEach(image => {
       image.onclick = () => {
-        lightbox.classList.add("show");
         lightboxImg.src = image.src;
         lightboxCap.innerHTML = image.getAttribute('alt');
+        lightbox.classList.add("show");
         if ("imageSrc" in image.dataset) {
           const req = new Request(image.dataset.imageSrc);
           fetch(req)
