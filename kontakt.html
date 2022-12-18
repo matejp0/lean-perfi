@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kontakt | Autolakovna Perfi</title>
+  </head>
+  <body>
+    <header class="tophead">
+      <a href="/" class="logo"><img class="logo" src="/images/perfi_w.svg" alt="Perfi"/></a>
+      <nav>
+        <ul>
+          <li><a href="/">Úvod</a></li>
+          <li><a href="/galerie.html">Fotogalerie</a></li>
+          <li><a class="active" href="/kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="big">Kontakt</h1>
+      <p>Autolakovna PERFI</p>
+      <p>Petr Fišer</p>
+      <ul id="contact-list">
+        <li>
+          <p class="icon">📞</p>
+          <p>602 446 772</p>
+        </li>
+        <li>
+          <p class="icon">📧</p>
+          <p><a href="mailto:perfi@email.cz">perfi@email.cz</a></p>
+        </li>
+        <li>
+          <p class="icon">IČ</p>
+          <p>72642777</p>
+        </li>
+        <li>
+          <p class="icon">🚩</p>
+          <p>Litoměřicko</p>
+        </li>
+      </ul>
+      <iframe style="border:none" src="https://en.frame.mapy.cz/s/foraberesa" width="100%" height="400px" frameborder="0"></iframe>
+    </main>
+
+    <style>
+    ul#contact-list {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+      font-size: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      align-items: center;
+      gap: 2rem;
+      /*padding: 40px;*/
+    }    
+    @media screen and (max-width: 699px) {
+      ul#contact-list {
+        flex-direction: column;
+      }
+    }
+    ul#contact-list li {
+      display: inline-block;
+      width: 100%;
+    }
+  
+    .icon {
+      font-size: 25px;
+      margin-bottom: 0;
+    }
+    </style>
+
+
+    <footer>
+      <p>@ Perfi 2023</p>
+    </footer>
+  </body>
+</html>

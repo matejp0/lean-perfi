@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Fotogalerie | Autolakovna Perfi</title>
+    <style>
+    #gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      grid-auto-rows: 10rem;
+      gap: 15px;
+    }
+
+    #gallery > figure {
+      margin: 0;
+      cursor: pointer;
+    }
+    #gallery > figure > img {
+      width: 100%;
+      border-radius: 5px;
+      height: 100%;
+      object-fit: cover;
+    }
+    </style>
+  </head>
+  <body>
+    <header class="tophead">
+      <a href="/" class="logo"><img class="logo" src="/images/perfi_w.svg" alt="Perfi"/></a>
+      <nav>
+        <ul>
+          <li><a href="/">Úvod</a></li>
+          <li><a class="active" href="/galerie.html">Fotogalerie</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    <light-box></light-box>
+      <h1 class="big">Fotogalerie</h1>
+      <div id="gallery">
+        <figure><img loading='lazy' src='/gallery/comp.Lakovací box.jpg' data-image-src='/gallery/Lakovací box.jpg' alt='Lakovací box'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Vůz po vytmelení, připraven na aplikaci stříkacího tmelu.jpg' data-image-src='/gallery/Vůz po vytmelení, připraven na aplikaci stříkacího tmelu.jpg' alt='Vůz po vytmelení, připraven na aplikaci stříkacího tmelu'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Vůz ve fázi plniče.jpg' data-image-src='/gallery/Vůz ve fázi plniče.jpg' alt='Vůz ve fázi plniče'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Vůz připraven k finální aplikaci barvy.jpg' data-image-src='/gallery/Vůz připraven k finální aplikaci barvy.jpg' alt='Vůz připraven k finální aplikaci barvy'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Vůz po po konečném lakování a sušení.jpg' data-image-src='/gallery/Vůz po po konečném lakování a sušení.jpg' alt='Vůz po po konečném lakování a sušení'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Vůz po po konečném lakování a sušení 2.jpg' data-image-src='/gallery/Vůz po po konečném lakování a sušení 2.jpg' alt='Vůz po po konečném lakování a sušení 2'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Fáze tvarování a designování zadní kapoty s křídlem.jpg' data-image-src='/gallery/Fáze tvarování a designování zadní kapoty s křídlem.jpg' alt='Fáze tvarování a designování zadní kapoty s křídlem'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Skelet vozu v plniči.jpg' data-image-src='/gallery/Skelet vozu v plniči.jpg' alt='Skelet vozu v plniči'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Skelet vozu v plniči 2.jpg' data-image-src='/gallery/Skelet vozu v plniči 2.jpg' alt='Skelet vozu v plniči 2'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Skelet vozu po finálním nalakování.jpg' data-image-src='/gallery/Skelet vozu po finálním nalakování.jpg' alt='Skelet vozu po finálním nalakování'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení.jpg' data-image-src='/gallery/Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení.jpg' alt='Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení 2.jpg' data-image-src='/gallery/Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení 2.jpg' alt='Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení 2'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení 3.jpg' data-image-src='/gallery/Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení 3.jpg' alt='Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení 3'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení 4.jpg' data-image-src='/gallery/Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení 4.jpg' alt='Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení 4'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení 5.jpg' data-image-src='/gallery/Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení 5.jpg' alt='Hotový sestavený vůz, připravený k odvozu a dalšímu nastrojení 5'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Další vůz Porsche, z našeho portfolia zakázek, připravený k odvozu zpět do továrny.jpg' data-image-src='/gallery/Další vůz Porsche, z našeho portfolia zakázek, připravený k odvozu zpět do továrny.jpg' alt='Další vůz Porsche, z našeho portfolia zakázek, připravený k odvozu zpět do továrny'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Další vůz Porsche, z našeho portfolia zakázek, připravený k odvozu zpět do továrny 2.jpg' data-image-src='/gallery/Další vůz Porsche, z našeho portfolia zakázek, připravený k odvozu zpět do továrny 2.jpg' alt='Další vůz Porsche, z našeho portfolia zakázek, připravený k odvozu zpět do továrny 2'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Další vůz Porsche, z našeho portfolia zakázek, připravený k odvozu zpět do továrny 3.jpg' data-image-src='/gallery/Další vůz Porsche, z našeho portfolia zakázek, připravený k odvozu zpět do továrny 3.jpg' alt='Další vůz Porsche, z našeho portfolia zakázek, připravený k odvozu zpět do továrny 3'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Další vůz Porsche, z našeho portfolia zakázek, připravený k odvozu zpět do továrny 4.jpg' data-image-src='/gallery/Další vůz Porsche, z našeho portfolia zakázek, připravený k odvozu zpět do továrny 4.jpg' alt='Další vůz Porsche, z našeho portfolia zakázek, připravený k odvozu zpět do továrny 4'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Vůz 928 Club Sport – fáze tmelení.jpg' data-image-src='/gallery/Vůz 928 Club Sport – fáze tmelení.jpg' alt='Vůz 928 Club Sport – fáze tmelení'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Vůz 928 Club Sport – fáze plniče.jpg' data-image-src='/gallery/Vůz 928 Club Sport – fáze plniče.jpg' alt='Vůz 928 Club Sport – fáze plniče'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Vůz 928 Club Sport – fáze finálního nalakování.jpg' data-image-src='/gallery/Vůz 928 Club Sport – fáze finálního nalakování.jpg' alt='Vůz 928 Club Sport – fáze finálního nalakování'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Vůz 928 Club Sport připraven k transportu.jpg' data-image-src='/gallery/Vůz 928 Club Sport připraven k transportu.jpg' alt='Vůz 928 Club Sport připraven k transportu'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Vůz 928 Club Sport připraven k transportu 2.jpg' data-image-src='/gallery/Vůz 928 Club Sport připraven k transportu 2.jpg' alt='Vůz 928 Club Sport připraven k transportu 2'/></figure>
+        <figure><img loading='lazy' src='/gallery/comp.Nalakované části chopperu.jpg' data-image-src='/gallery/Nalakované části chopperu.jpg' alt='Nalakované části chopperu'/></figure>
+      </div>
+    </main>
+
+
+
+    <footer>
+      <p>@ Perfi 2023</p>
+    </footer>
+    <script src="lightbox.js"></script>
+  </body>
+</html>

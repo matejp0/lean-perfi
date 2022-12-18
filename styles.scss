@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800;900&display=swap');
+
+$white: #edf0f1;
+$whiter: #F5F9FA;
+$grey: #757989;
+$black: #24252A;
+$blackish: #0b0504;
+$primary: #e77817;
+$primary-dark: #cf6c14;
+$primary-darkest: #351b05;
+$primary-light: #eea05c;
+$secondary: #17C3E8;
+$secondary-dark-alt: #062845;
+$secondary-dark: #006880;
+$secondary-darkest: #004959;
+
+$max-phone: 699px;
+
+
+:root {
+  --side-padding: 2rem;
+  @supports (--side-padding: clamp(1rem, 7vw + 1rem, 10rem)) {
+    --side-padding: clamp(1rem, 7vw + 1rem, 10rem);
+  }
+  --max-phone: 699px;
+  --white: #F5F9FA;
+  --grey: #757989;
+}
+
+@media only screen and (max-width: $max-phone) {
+  :root {
+    --side-padding: 1rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  background-color: $whiter;
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1.big {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+h2 {
+  color: $secondary-darkest;
+  font-weight: 800;
+  font-size: 1.7rem;
+}
+
+header.tophead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px var(--side-padding);
+  background-color: $secondary-dark-alt;
+  color: $whiter;
+
+  a.logo {
+    line-height: 0;
+
+  }
+  img.logo {
+    width: 6rem;
+    @supports (width: clamp(6rem, 20vw, 10rem)) {
+      width: clamp(6rem, 20vw, 10rem);
+    }
+    height: auto;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        margin-left: 1.5rem;
+      }
+      @supports(column-gap: min(4vw, 2rem)) {
+        column-gap: min(4vw, 2rem);
+        li { 
+          margin-left: 0;
+        }
+      }
+
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $whiter;
+    font-weight: 700;
+    transition: all 0.2s ease 0s;
+    &:hover {
+      color: $primary;
+    }
+    &.button:hover {
+      color: $whiter
+    }
+    &.active {
+      border-bottom: 1px solid $primary;
+    }
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .logo {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+main {
+  padding: 40px var(--side-padding);
+}
+
+footer {
+  background-color: $secondary-dark-alt;
+  color: $whiter;
+  text-align: center;
+  padding: 20px var(--side-padding);
+  margin-top: auto;
+}
+
+a.button {
+  background-color: $primary;
+  color: $whiter;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  &:hover {
+    background-color: $primary-dark;
+    color: $whiter;
+    text-decoration: none;
+  }
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease 0s;
+  text-decoration: none;
+}
+
+#hero {
+  padding: 4rem var(--side-padding);
+  background-color: $secondary-dark-alt;
+  color: $whiter;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  align-items: center;
+  resize: both;
+  gap: 2rem;
+  overflow: auto;
+  
+  @media only screen and (max-width: $max-phone) {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .text {
+    max-width: 100%;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+
+
+.logos {
+  padding-left: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-gap: 20px;
+
+  li {
+    text-align: center;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+#certs {
+  padding-left: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-gap: 20px;
+
+  li {
+    text-align: center;
+    img {
+      max-width: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+a {
+  color: $secondary-dark;
+  text-decoration: none;
+  transition: .5s ease-in all;
+}
+a:hover {
+  color: $secondary-dark;
+  text-decoration: underline;
+}
+
